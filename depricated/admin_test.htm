@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>OpenVote - Administration</title>
+	<link href="./style.css" rel="stylesheet" type="text/css" />
+	<link href="./admin.css" rel="stylesheet" type="text/css" />
+	<script src="./scripts/libs/jquery-1.9.1.js">
+		
+	</script>
+	<script src="./scripts/OpenVote.js">
+	
+	</script>
+	<script src="./scripts/admin.js">
+	
+	</script>
+</head>
+	<body>
+		<div id="global_nav_bar">
+			<div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:redirect('index.php');"><span id="global_nav_text">OpenVote</span></div>
+			<div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:redirect('applet.htm');"><span id="global_nav_text">Voting Applet</span></div>
+			<div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:redirect('view_poll.php');"><span id="global_nav_text">View Polls</span></div>
+			<div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" style="float:right;" onclick="javascript:redirect('admin.php');"><span id="global_nav_text">Admin. Page</span></div>
+		</div>
+	
+		<div id="admin-panel">
+			<div id="sidebar-menue">
+				<ul>
+					<li><span id="sidebar-category">Ballot Actions</span></li>
+						<ul>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('BallotBuilder');">Create Ballot</span></li>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('BallotChanger');">Edit Ballot</span></li>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('BallotKiller');">Delete Ballot</span></li>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('BallotActivator');">Activate Ballot</span></li>
+						</ul>
+					<li><span id="sidebar-category">Voter Actions</span></li>
+						<ul>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('VoterCreator');">Generate Voter List</span></li>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('VoterPrinter');">Print Voter List</span></li>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('VoterRegister');">Register Voter List</span></li>
+						</ul>
+					<li><span id="sidebar-category">Permissions</span></li>
+						<ul>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('BViewable');">Ballots Viewable</span></li>
+							<li><span id="sidebar-option" onclick="javascript:changeSemper('BVotable');">Ballots Votable</span></li>
+						</ul>
+				</ul>
+			</div>
+			<div id="action-panel">
+				<div id="action">
+					<div id="Default" class="action-semper" style="display:inline">
+						<center><h2>Click an Option to Get Started</h2></center>
+					</div>
+					<div id="BallotBuilder" class="action-semper"> <!-- Ballot Creator -->
+						<center><h2> Ballot Builder </h2></center>
+						<form action="php-libs/action.php" method="POST">
+							<input type="hidden" name="action" value="1" />
+							<input type="hidden" name="ballot_id" value="javascript:document.write(ballotId);" />
+							<div id="ballot-header">
+								Ballot ID: <script>document.write(ballotId)</script>
+							</div>
+							<div id="candidate1" class="candidate"><center>
+								<div class="img-upload">
+									<img src="img/img-001.jpg" class="candidate-img" />
+									<input type="file" name="image1" value="Path to image..." />
+									<br>
+									<label>Name: </label><input type="text" id="name1" name="name1" onfocus="javascript:f('name1');" style="margin-top:15px;" value="Candidate Name..." />
+								</div>
+							</center></div>
+							<div id="candidate2" class="candidate"><center>
+								<div class="img-upload">
+									<img src="img/img-001.jpg" class="candidate-img" />
+									<input type="file" name="image1" value="Path to image..." />
+									<br>
+									<label>Name: </label><input type="text" id="name2" name="name2" onfocus="javascript:f('name1');" style="margin-top:15px;" value="Candidate Name..." />
+								</div>
+							</center></div><br />
+							<button onclick="javascript:addCandidate();" id="add-candidate" text="Add Candidate">Add Candidate</button>
+							<hr />
+							<input type="submit" id="submit-button" value="Create Ballot" />
+						</form><br />
+					</div>
+					<div id="BallotChanger" class="action-semper"> <!-- Ballot Editor -->
+						<center><h2> Ballot Editor </h2></center>
+						<div id="chooser-box">
+							<form action="action.php" method="post">
+								<input type="hidden" name="action" value="2" />
+								<label>What Poll to Edit: </label>
+								<select name="poll">
+									<?php $sql = new mysqli('localhost','root','','openvote');  ?>
+								</select>
+							</form>
+						</div>
+					</div>
+					<div id="BallotKiller" class="action-semper"> <!-- Ballot Killer -->
+						<h1> Delete Ballot </h1>
+					</div>
+					<div id="BallotActivator" class="action-semper"> <!-- Ballot Activator -->
+						<h1> Activate Ballot </h1>
+					</div>
+					<div id="VoterCreator" class="action-semper"> <!-- Voter List Generator -->
+						<h1> Generate Voter List </h1>
+					</div>
+					<div id="VoterPrinter" class="action-semper"> <!-- Print Voter List -->
+						<h1> Print Voter List <h1>
+					</div>
+					<div id="VoterRegister" class="action-semper"> <!-- Register Voter List -->
+						<h1> Register Voter List </h1>
+					</div>
+					<div id="BViewable" class="action-semper"> <!-- Ballots Viewable -->
+						<h1> Ballots Viewable </h1>
+					</div>
+					<div id="BVotable" class="action-semper"> <!-- Ballots Votable -->
+						<h1> Ballots Votable </h1>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

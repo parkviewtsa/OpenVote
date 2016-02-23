@@ -1,0 +1,128 @@
+#global_nav_bar{
+	position: fixed;
+	top:0;
+	left:2px;
+	height: 5%;
+	width:99.4%;
+	background-color:#00B0FC;
+	border-bottom:2px solid white;
+	padding:3px;
+	font-family:"Helvetica", helvetica, sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+	z-index:3;
+}	
+
+#global_nav_item
+{
+	top:1px;
+	vertical-align:top;
+	position:relative;
+	float:left;
+	height:84%;
+	width:18%;
+	border:1px solid black;
+	text-align:center;
+	text-decoration:none;
+	cursor:pointer;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	padding:1px; 
+	
+	z-index:4;
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #00A0EB 0%, #00A0EB 50%, #2DBCFF 51%, #2DBCFF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #00A0EB 0%, #00A0EB 50%, #2DBCFF 51%, #2DBCFF 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #00A0EB 0%, #00A0EB 50%, #2DBCFF 51%, #2DBCFF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #00A0EB), color-stop(0.5, #00A0EB), color-stop(0.51, #2DBCFF), color-stop(1, #2DBCFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #00A0EB 0%, #00A0EB 50%, #2DBCFF 51%, #2DBCFF 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #00A0EB 0%, #00A0EB 50%, #2DBCFF 51%, #2DBCFF 100%);
+
+}
+
+#global_nav_text{
+	position:relative;
+	top:25%;
+	left:0px;
+	
+	z-index:5;
+}
+
+#nodecor
+{
+	text-decoration:none;	
+}
+
+#outer-cbox
+{
+	position:absolute;
+	top:28%;
+	left:28%;
+	width:40%;
+	vertical-align:middle;
+	font-family:"Helvetica", helvetica, sans-serif;
+	font-size: 15px;
+	padding:20px;
+	background-color: #CACACA;
+	border-radius:30px;
+	text-align:center;
+	
+	box-shadow:5px 5px 3px #333333;
+}
+
+#inner-cbox-text{
+	position:relative;
+	vertical-align:middle;
+	text-align:center;
+}
+
+#applet_border
+{
+
+}
+
+html
+{
+	
+	height:100%;
+	min-height:100%;
+}
+
+body
+{
+background-color:#999999;
+height:100%;
+width:100%;
+margin: 0;
+
+/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top left, #B3B3B3 0%, #0C0C0C 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top left, #B3B3B3 0%, #0C0C0C 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top left, #B3B3B3 0%, #0C0C0C 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #B3B3B3), color-stop(1, #0C0C0C));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top left, #B3B3B3 0%, #0C0C0C 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom right, #B3B3B3 0%, #0C0C0C 100%);
+}

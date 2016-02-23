@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<OpenVote>
+	<poll id="0003" type="election">
+		<!-- the id is what is used in the php page to accumulate votes for the correct poll.
+		The type variable is used to parse the xml for the correct type of poll (election, social, e.g.) -->
+		<pool id="Presidential"> <!-- The pool id is the type of pool the voter is voting for -->
+		
+			<candidate id="246">
+				<name>Jack Henson</name>
+				<picture src="img-001.jpg" /> <!-- src is the path to the profile picture -->
+			</candidate>
+			<candidate id="761">
+				<name>Ferral McAvoy</name>
+				<picture src="img-001.jpg" />
+			</candidate>
+			<candidate id="945">
+				<name>James Dean</name>
+				<picture src="img-001.jpg" />
+			</candidate>
+			
+			<candidate id="462">
+				<name>Harold Finch</name>
+				<picture src="img-001.jpg" />
+			</candidate>
+			
+			<candidate id="648">
+				<name>John Reese</name>
+				<picture src="img-001.jpg" />
+			</candidate>
+			
+			
+		
+		</pool>
+		
+		<pool id="General">
+		
+			<candidate id="987">
+				<name>Jack Fledgeling</name>
+				
+				<picture src="img-001.jpg" /> <!-- src is the path to the profile picture -->
+			</candidate>
+			<candidate id="148">
+				<name>Aaron James</name>
+				<picture src="img-001.jpg" />
+			</candidate>
+			<candidate id="212">
+				<name>Vince LaRue</name>
+				
+				<picture src="img-001.jpg" />
+				
+			</candidate>
+			
+			<candidate id="846">
+				<name>Alexis Huntington</name>
+				
+				<picture src="img-001.jpg" />
+				
+			</candidate>
+			
+			<candidate id="007">
+				<name>Daniel Craig</name>
+				
+				<picture src="img-001.jpg" />
+				
+			</candidate>
+			
+		</pool>
+	
+	</poll>
+
+
+</OpenVote>

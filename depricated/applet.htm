@@ -1,0 +1,29 @@
+<html>
+	<head>
+    	<meta charset="UTF-8">
+		<title>OpenVote</title>
+        <link rel="stylesheet" href="./style.css" type="text/css" />
+        <script src="scripts/OpenVote.js">
+		
+		</script>
+		<script src="scripts/OpenVote.js">
+		
+		</script>
+	</head>
+	
+	<body>
+    <div id="global_nav_bar">
+		<div id="global_nav_item"  onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:redirect('index.php');"><span id="global_nav_text">OpenVote</span></div>
+		<div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:redirect('applet.htm');"><span id="global_nav_text">Voting Applet</span></div>
+	  <div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" onclick="javascript:redirect('view_poll.php');"><span id="global_nav_text">View Polls</div>
+		<div id="global_nav_item" onmouseover="javascript:this.style.cursor='pointer'" style="float:right;" onclick="javascript:redirect('admin.php');"><span id="global_nav_text">Admin. Page</span></div>
+	</div>
+    <center>
+    <div id="outer-cbox" style="padding:2%; top:11%; left:19%; width:56%;">
+		<applet code="MainElectionWindow.class" archive="https://localhost/openvote/applet/openvote.jar" width="800" height="600">
+		<!-- Place Neccesary Parameters Here -->
+		</applet>
+    </div>
+    </center>
+	</body>
+</html>
